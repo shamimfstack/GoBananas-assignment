@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import DisplayData from './components/DisplayData';
+import SearchField from './components/SearchField';
 
 function App() {
   const [ text, setText ] = useState("");
@@ -13,9 +14,15 @@ function App() {
     .then(data => setData(data))
   }, [])
 
+  const handleSearch = (e) => {
+    setText(e.target.value);
+  }
+
   return (
     <div className="App">
-      <h1>Assignment</h1>
+      {/* search field */}
+      <SearchField text={text} onSearch={handleSearch} />
+      {/* displaying data */}
       <DisplayData data={data} />
     </div>
   );

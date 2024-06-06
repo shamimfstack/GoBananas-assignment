@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <div style={style}>
             <h1>GoBananas</h1>
-            <p>A leading IT Company, where innovative app are created</p>
+            <p>A leading IT Company, where innovative apps are created</p>
         </div>
         );
 }

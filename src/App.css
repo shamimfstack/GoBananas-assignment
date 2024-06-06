@@ -1,6 +1,19 @@
 .App {
   text-align: center;
+  
 }
+
+footer {
+  background: #1d818c;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+/* style={{padding: "10px 0", backgroundColor: "#1d818c", color: "#fff", bottom: "0"}} */
 
 .App-logo {
   height: 40vmin;

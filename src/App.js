@@ -10,6 +10,7 @@ function App() {
   const [ text, setText ] = useState("");
   const [ data, setData ] = useState([]);
 
+  // fetching all data using api
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
     .then(res => res.json())
@@ -17,9 +18,7 @@ function App() {
   }, [])
 
   const handleSearch = (e) => {
-    // e.preventDefault();
     setText(e.target.value);
-    // console.log(e.target.value);
   }
 
   const searchedData = data.filter((item) =>

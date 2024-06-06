@@ -1,6 +1,6 @@
 import { Box, TextField } from "@mui/material";
 
-export default function SearchField({ text, onSearch }) {
+export default function SearchField({onSearch }) {
   return (
     <div
       style={{ display: "flex", justifyContent: "flex-end", padding: "20px" }}
@@ -13,6 +13,7 @@ export default function SearchField({ text, onSearch }) {
         noValidate
         autoComplete="off"
       >
+        {/* search field */}
         <TextField
           id="standard-search"
           label="Enter text to search"

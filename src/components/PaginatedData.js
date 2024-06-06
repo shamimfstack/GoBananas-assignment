@@ -10,6 +10,7 @@ import {
   TablePagination,
 } from "@mui/material";
 
+
 const columns = [
   { id: "id", label: "User ID", minWidth: 170 },
   { id: "name", label: "Name", minWidth: 100 },
@@ -25,11 +26,13 @@ export default function PaginatedData({ data, text }) {
     setPage(newPage);
   };
 
+//   changing the number of row
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
 
+//   finding data using search result
   const searchedData = data.filter((item) =>
     item.name.toLowerCase().startsWith(text.toLowerCase())
   );

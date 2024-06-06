@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 function App() {
   const [ text, setText ] = useState("");
   const [ data, setData ] = useState([]);
-  console.log(text);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -18,9 +17,9 @@ function App() {
   }, [])
 
   const handleSearch = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     setText(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value);
   }
 
   const searchedData = data.filter((item) =>

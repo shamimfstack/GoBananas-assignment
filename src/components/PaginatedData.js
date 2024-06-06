@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 
 const columns = [
-  { id: "id", label: "ID", minWidth: 170 },
+  { id: "id", label: "User ID", minWidth: 170 },
   { id: "name", label: "Name", minWidth: 100 },
   { id: "email", label: "Email", minWidth: 100 },
   { id: "website", label: "Website", minWidth: 100 },
@@ -75,7 +75,7 @@ export default function PaginatedData({ data, text }) {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[5, 10]}
+        rowsPerPageOptions={[1, 2, 5, 10]}
         component="div"
         count={data.length}
         rowsPerPage={rowsPerPage}

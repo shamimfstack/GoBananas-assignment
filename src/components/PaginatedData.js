@@ -35,7 +35,7 @@ export default function PaginatedData({ data, text }) {
   );
 
   return (
-    <Paper sx={{ width: "100%", overflow: "hidden" }}>
+    <Paper sx={{ width: "100%", overflow: "hidden", padding: "20px 0" }}>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table aria-label="sticky table">
           <TableHead>
@@ -54,11 +54,11 @@ export default function PaginatedData({ data, text }) {
           <TableBody>
             {searchedData
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row) => {
+              .map((user) => {
                 return (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                  <TableRow hover role="checkbox" tabIndex={-1} key={user.code}>
                     {columns.map((column) => {
-                      const value = row[column.id];
+                      const value = user[column.id];
                       return (
                         <TableCell key={column.id} align={column.align}>
                           {column.format && typeof value === "number"

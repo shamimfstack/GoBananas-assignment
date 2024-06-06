@@ -1,7 +1,8 @@
 export default function Header() {
     const style = {
         padding: "20px 0",
-        backgroundColor: "DodgerBlue"
+        backgroundColor: "#145960",
+        color: "#fff"
     }
     return (
         <div style={style}>

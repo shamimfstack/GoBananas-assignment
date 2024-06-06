@@ -1,10 +1,10 @@
 
 import { useEffect, useState } from 'react';
 import './App.css';
-import DisplayData from './components/DisplayData';
 import SearchField from './components/SearchField';
 import Header from './components/Header';
 import PaginatedData from './components/PaginatedData';
+import Footer from './components/Footer';
 
 function App() {
   const [ text, setText ] = useState("");
@@ -34,10 +34,9 @@ function App() {
       {/* search field */}
       <SearchField text={text} onSearch={handleSearch} />
       {/* displaying all data */}
-      {/* <DisplayData data={data} /> */}
-      {/* <hr /> */}
-      {/* paginated data */}
-      <PaginatedData data={data} text={text} />
+      { text.length === 0 ? <PaginatedData data={data} text={text} />: searchedData.length > 0 ? <PaginatedData data={searchedData} text={text} /> : "No Data Found"}
+      {/* footer */}
+      <Footer />
     </div>
   );
 }
